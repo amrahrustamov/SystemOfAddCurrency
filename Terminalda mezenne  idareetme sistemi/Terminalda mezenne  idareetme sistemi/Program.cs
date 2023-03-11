@@ -11,18 +11,14 @@ namespace Terminalda_mezenne__idareetme_sistemi
             string[] currencyCodes = new string[5] { "USD", "RUB", "TRY", "EURO", "CNY" };
             double[] exchangeRate = new double[5] { 1.7000, 0.0224, 0.0898, 1.8011, 0.2441 };
             ////////////////////////////////////////////////////////////////////////////////
-
             int[] menuNumbers = new int[4];
             menuNumbers[0] = 1;
             menuNumbers[1] = 2;
             menuNumbers[2] = 3;
             menuNumbers[3] = 4;
 
-
-
             while (true)
             {
-
                 Console.WriteLine(" " + "Menu");
                 Console.WriteLine("");
 
@@ -34,9 +30,7 @@ namespace Terminalda_mezenne__idareetme_sistemi
                 Console.WriteLine("");
                 Console.Write("Select one : ");
                 int selectMenuNumber = int.Parse(Console.ReadLine());
-
                 ////////////////////////////////////////////////////////////////////////
-
                 if (menuNumbers[0] == selectMenuNumber)
                 {
                     Console.WriteLine("");
@@ -50,10 +44,7 @@ namespace Terminalda_mezenne__idareetme_sistemi
                     Console.WriteLine(currencyCodes[4] + " " + exchangeRate[4]);
                     Console.WriteLine("");
                 }
-
                 /////////////////////////////////////////////////////////////////////////////
-
-
                 if (menuNumbers[1] == selectMenuNumber)
                 {
                     Console.WriteLine("");
@@ -67,48 +58,37 @@ namespace Terminalda_mezenne__idareetme_sistemi
                     if (currencyCodes[0].Contains(addCurrencyCode))
                     {
                         Console.WriteLine(currencyCodes[0] + " " + exchangeRate[0]);
-
                     }
                     if (currencyCodes[1].Contains(addCurrencyCode))
                     {
                         Console.WriteLine(currencyCodes[1] + " " + exchangeRate[1]);
-
                     }
                     if (currencyCodes[2].Contains(addCurrencyCode))
                     {
                         Console.WriteLine(currencyCodes[2] + " " + exchangeRate[2]);
-
                     }
                     if (currencyCodes[3].Contains(addCurrencyCode))
                     {
                         Console.WriteLine(currencyCodes[3] + " " + exchangeRate[3]);
-
                     }
                     if (currencyCodes[4].Contains(addCurrencyCode))
                     {
                         Console.WriteLine(currencyCodes[4] + " " + exchangeRate[4]);
-
                     }
 
                     if(!currencyCodes[0].Contains(addCurrencyCode) || currencyCodes[4].Contains(addCurrencyCode) ||
                        currencyCodes[4].Contains(addCurrencyCode) || currencyCodes[4].Contains(addCurrencyCode) ||
                        currencyCodes[4].Contains(addCurrencyCode))
-                    {
-                        
+                    {   
                         Console.WriteLine("This code is not available in our system");
                     }
                 }
-
-                ////////////////////////////////////////////////////////////////////////////
-                ///
-
-
+                ///////////////////////////////////////////////////////////////////////////
                 if (menuNumbers[2] == selectMenuNumber)
                 {
                     Console.WriteLine("");
                     Console.WriteLine(" " + "Menu" + " / " + "Calculate amount by currency");
                     Console.WriteLine("");
-
 
                     Console.Write("Add the amount : ");
                     double amount = Convert.ToDouble(Console.ReadLine());
@@ -120,41 +100,33 @@ namespace Terminalda_mezenne__idareetme_sistemi
                     {
                         double result = exchangeRate[0] * amount;
                         Console.WriteLine("Result : " + result + " AZN");
-
                     }
                     if (currencyCodes[1].Contains(addCurrencyCode))
                     {
                         double result = exchangeRate[1] * amount;
                         Console.WriteLine("Result : " + result + " AZN");
-
                     }
                     if (currencyCodes[2].Contains(addCurrencyCode))
                     {
                         double result = exchangeRate[2] * amount;
                         Console.WriteLine("Result : " + result + " AZN");
-
                     }
                     if (currencyCodes[3].Contains(addCurrencyCode))
                     {
                         double result = exchangeRate[3] * amount;
                         Console.WriteLine("Result : " + result + " AZN");
-
                     }
                     if (currencyCodes[4].Contains(addCurrencyCode))
                     {
                         double result = exchangeRate[4] * amount;
                         Console.WriteLine("Result : " + result + " AZN");
-
                     }
                     if (!currencyCodes[0].Contains(addCurrencyCode) || currencyCodes[4].Contains(addCurrencyCode) ||
                        currencyCodes[4].Contains(addCurrencyCode) || currencyCodes[4].Contains(addCurrencyCode) ||
                        currencyCodes[4].Contains(addCurrencyCode))
                     {
-
                         Console.WriteLine("This code is not available in our system");
                     }
-
-
                 }
                     if (menuNumbers[3] == selectMenuNumber)
                     {
