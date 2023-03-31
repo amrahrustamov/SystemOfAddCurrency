@@ -6,37 +6,33 @@ namespace Terminalda_mezenne__idareetme_sistemi
     {
         static void Main(string[] args)
         {
-
             int[] currencyListNumbers = new int[5] { 1, 2, 3, 4, 5 };
             string[] currencyCodes = new string[5] { "USD", "RUB", "TRY", "EURO", "CNY" };
             double[] exchangeRate = new double[5] { 1.7000, 0.0224, 0.0898, 1.8011, 0.2441 };
             ////////////////////////////////////////////////////////////////////////////////
-            int[] menuNumbers = new int[4];
-            menuNumbers[0] = 1;
-            menuNumbers[1] = 2;
-            menuNumbers[2] = 3;
-            menuNumbers[3] = 4;
-
+            
+            string showRecentCurrencyRates = "Show recent currency rates";
+            string findCurrencyRateByCode = "Find currency rate by code";
+            string calculateAmountByCurrency = "Calculate amount by currency";
+            string exit = "Exit";
+            
             while (true)
             {
                 Console.WriteLine(" " + "Menu");
                 Console.WriteLine("");
-
-                Console.WriteLine(menuNumbers[0] + " " + "Show recent currency rates");
-                Console.WriteLine(menuNumbers[1] + " " + "Find currency rate by code");
-                Console.WriteLine(menuNumbers[2] + " " + "Calculate amount by currency");
-                Console.WriteLine(menuNumbers[3] + " " + "Exit");
-
+                Console.WriteLine("Show recent currency rates");
+                Console.WriteLine("Find currency rate by code");
+                Console.WriteLine("Calculate amount by currency");
+                Console.WriteLine("Exit");
                 Console.WriteLine("");
                 Console.Write("Select one : ");
-                int selectMenuNumber = int.Parse(Console.ReadLine());
+                string command = Console.ReadLine();
                 ////////////////////////////////////////////////////////////////////////
-                if (menuNumbers[0] == selectMenuNumber)
+                if (command == showRecentCurrencyRates)
                 {
                     Console.WriteLine("");
                     Console.WriteLine(" " + "Menu" + " / " + "Show recent currency rates");
                     Console.WriteLine("");
-
                     Console.WriteLine(currencyCodes[0] + " " + exchangeRate[0]);
                     Console.WriteLine(currencyCodes[1] + " " + exchangeRate[1]);
                     Console.WriteLine(currencyCodes[2] + " " + exchangeRate[2]);
@@ -45,12 +41,11 @@ namespace Terminalda_mezenne__idareetme_sistemi
                     Console.WriteLine("");
                 }
                 /////////////////////////////////////////////////////////////////////////////
-                if (menuNumbers[1] == selectMenuNumber)
+                if (command == findCurrencyRateByCode)
                 {
                     Console.WriteLine("");
                     Console.WriteLine(" " + "Menu" + " / " + "Find currency rate by code");
                     Console.WriteLine("");
-
                     Console.Write("Add currency code : ");
                     string addCurrencyCode = Console.ReadLine();
                     Console.WriteLine("");
@@ -84,7 +79,7 @@ namespace Terminalda_mezenne__idareetme_sistemi
                     }
                 }
                 ///////////////////////////////////////////////////////////////////////////
-                if (menuNumbers[2] == selectMenuNumber)
+                if (command == calculateAmountByCurrency)
                 {
                     Console.WriteLine("");
                     Console.WriteLine(" " + "Menu" + " / " + "Calculate amount by currency");
@@ -128,7 +123,7 @@ namespace Terminalda_mezenne__idareetme_sistemi
                         Console.WriteLine("This code is not available in our system");
                     }
                 }
-                    if (menuNumbers[3] == selectMenuNumber)
+                    if (command == exit)
                     {
                         break;
                     }
