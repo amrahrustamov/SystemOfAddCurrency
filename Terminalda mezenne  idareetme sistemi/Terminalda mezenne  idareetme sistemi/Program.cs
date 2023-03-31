@@ -7,7 +7,7 @@ namespace Terminalda_mezenne__idareetme_sistemi
     {
         static void Main(string[] args)
         {
-            string[] currencyCodes = new string[5] { "USD", "RUB", "TRY", "EURO", "CNY" };
+            string[] currencyCodes = new string[5] { "USD", "RUB", "TRY", "EUR", "CNY" };
             double[] exchangeRate = new double[5] { 1.7000, 0.0224, 0.0898, 1.8011, 0.2441 };
             ////////////////////////////////////////////////////////////////////////////////
             string showRecentCurrencyRates = "Show recent currency rates";
